@@ -13,6 +13,5 @@ docker build . -t smash
 
 ### Running
 ```
-docker run -p 5900:5900 --volume="$HOME/.config/SlippiOnline:/root/.config/SlippiOnline" --volum
-e="$(pwd)/../:/app" --rm -it smash
+docker run -p 5900:5900 --volume="$HOME/.config/SlippiOnline:/root/.config/SlippiOnline" --volume="$(pwd)/../:/app" --rm -it smash
 ```
