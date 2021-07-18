@@ -1,18 +1,26 @@
 # begin-fix-this
 NOT MY SERVER, NOT MY PROBLEM
 
+=======
 ## docker
 This is definitely not complete.
 
-You will need a vncviewer, I used remmina.
-
-### Building
-```
-docker build . -t smash
+#### Build the image as 
+```bash
+docker build . -t slippi-melee
 ```
 
-### Running
+
+#### Run it as 
+```bash
+docker run -p 5900:5900 -v <your legit smash iso>:/app/smash.iso slippi-melee
 ```
-docker run -p 5900:5900 --volume="$HOME/.config/SlippiOnline:/root/.config/SlippiOnline" --volum
-e="$(pwd)/../:/app" --rm -it smash
-```
+
+#### See the game output
+
+Connect a vpn client (vncviewer, remmina...) to localhost:5900 to see
+
+
+#### Issues
+
+* As of now, the dolphin interface is in front of the gameplay
