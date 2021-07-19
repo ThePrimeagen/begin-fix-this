@@ -13,7 +13,7 @@ docker build . -t slippi-melee
 
 #### Run it as 
 ```bash
-docker run -p 5900:5900 -v <your legit smash iso>:/app/smash.iso slippi-melee
+docker run -p 5900:5900 -v <your legit smash iso>:/app/iso/smash.iso slippi-melee
 ```
 
 #### See the game output
