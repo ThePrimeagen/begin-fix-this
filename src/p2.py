@@ -5,7 +5,7 @@ class MyPlayer(Player):
     def get_character(self) -> melee.Character:
         return melee.Character.LINK
 
-    def getCostume(self) -> int:
+    def get_costume(self) -> int:
         return 0
 
     def step(self, gamestate: melee.GameState):
