@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y python3 python3-pip x11vnc xvfb libao-d
 RUN apt clean -y && apt autoremove -y && apt autoclean -y
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-RUN ./Slippy.AppImage --appimage-extract
 COPY . .
+RUN /app/Slippy.AppImage --appimage-extract
 RUN echo "exec python3 /app/example.py -e /app/squashfs-root/usr/bin --iso iso/smash.iso" > ~/.xinitrc && chmod +x ~/.xinitrc
 RUN mkdir -p /root/.config/SlippiOnline/Config
 RUN cp Dolphin.ini /root/.config/SlippiOnline/Config/Dolphin.ini
